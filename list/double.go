@@ -18,6 +18,20 @@ func NewD[T any]() *D[T] {
 	return new(D[T])
 }
 
+func NewDfrom[T any](V T) *D[T] {
+	d:= new(D[T])
+
+	item := &ditem[T]{
+		data: value,
+	}
+	d.head = item
+	d.tail = item
+	d.length=1
+	return d
+}
+
+
+
 // 链表重置
 func (s *D[T]) Reset() {
 	s.length = 0
