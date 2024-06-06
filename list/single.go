@@ -17,7 +17,7 @@ func NewS[T any]() *S[T] {
 	return new(S[T])
 }
 
-func NewSlistFrom[T any](v T) *S[T] {
+func NewSfrom[T any](v T) *S[T] {
 	s := new(S[T])
 	n := new(sitem[T])
 	n.data = v
