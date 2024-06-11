@@ -18,11 +18,11 @@ func NewD[T any]() *D[T] {
 	return new(D[T])
 }
 
-func NewDfrom[T any](V T) *D[T] {
+func NewDfrom[T any](v T) *D[T] {
 	d:= new(D[T])
 
 	item := &ditem[T]{
-		data: value,
+		data: v,
 	}
 	d.head = item
 	d.tail = item
