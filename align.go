@@ -2,6 +2,9 @@ package bioutil
 
 func LeftAlign(ref, alt string) (string, string) {
 	r, a := len(ref), len(alt)
+	if r<=1 || a<=1 {
+		return ref, alt
+	}
 	var index int
 	for i := 1; true; i++ {
 		if i == r || i == a {
